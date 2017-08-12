@@ -7,7 +7,7 @@
   "author": "Anna Sadocha",
   "license": "MIT",
   "scripts": {
-    "dev": "pm2 start lib/server.js --watch --interpreter babel-node",
+    "dev": "NODE_PATH=./lib pm2 start lib/server.js --watch --interpreter babel-node",
     "webpack": "webpack -wd",
     "test": "jest --watch"
   },
@@ -22,7 +22,8 @@
     "babel-eslint": "^7.2.3",
     "eslint": "^4.3.0",
     "eslint-plugin-react": "^7.1.0",
-    "jest": "^20.0.4"
+    "jest": "^20.0.4",
+    "react-test-renderer": "^15.6.1"
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
